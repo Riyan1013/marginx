@@ -1,36 +1,301 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MarginX
 
-## Getting Started
+**Cross-Border Financial Intelligence Platform**
 
-First, run the development server:
+MarginX is a financial analysis platform designed to help users evaluate the profitability of selling products or services across international markets.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+It analyzes currency conversion, product costs, shipping, platform fees, payment processing fees, taxes, and other expenses to estimate profitability and compare different scenarios.
+
+> MarginX is an analytical and educational tool. It does not process real payments, execute trades, or provide professional financial advice.
+
+---
+
+## Features
+
+### Financial Analysis
+
+MarginX calculates:
+
+- Revenue
+- Total costs
+- Net profit
+- Profit margin
+- Break-even selling price
+- Cost breakdown
+
+### Cross-Border Analysis
+
+Users can evaluate transactions across different markets and currencies by considering:
+
+- Source country
+- Target country
+- Source currency
+- Target currency
+- Exchange rates
+- International shipping
+- Platform fees
+- Payment processing fees
+- Additional costs
+
+### Scenario Analysis
+
+MarginX can compare different financial scenarios:
+
+- Best Case
+- Base Case
+- Worst Case
+
+This helps users understand how changes in costs, prices, and exchange rates can affect profitability.
+
+---
+
+## Planned Features
+
+MarginX is being developed incrementally.
+
+### Phase 1 — Financial Engine
+
+- Deterministic financial calculations
+- Currency conversion
+- Cost modeling
+- Profit calculation
+- Margin calculation
+- Break-even calculation
+- Scenario analysis
+
+### Phase 2 — User Interface
+
+- Analysis dashboard
+- Financial input forms
+- Results visualization
+- Cost breakdown
+- Scenario comparison
+
+### Phase 3 — Live Financial Data
+
+- Live exchange rates
+- Currency data
+- Exchange-rate timestamps
+- External API error handling
+
+### Phase 4 — User Accounts
+
+- Authentication
+- Saved analyses
+- Analysis history
+- User dashboard
+
+### Phase 5 — AI Financial Assistant
+
+The AI layer will help users:
+
+- Understand their financial results
+- Identify major cost factors
+- Compare scenarios
+- Ask questions about an analysis
+- Describe an analysis using natural language
+
+The deterministic financial engine remains the source of truth for numerical calculations.
+
+### Phase 6 — Advanced Intelligence
+
+Potential future capabilities include:
+
+- Sensitivity analysis
+- Market comparison
+- Financial risk indicators
+- Blockchain-based analysis verification
+
+---
+
+## Architecture
+
+MarginX is built using a modular architecture.
+
+```text
+User
+ │
+ ▼
+Next.js Interface
+ │
+ ▼
+Application Layer
+ │
+ ├───────────────┐
+ ▼               ▼
+Financial      External
+Engine         APIs
+ │
+ ▼
+Financial Results
+ │
+ ├───────────────┐
+ ▼               ▼
+UI              AI
+              Assistant
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The financial engine is intentionally separated from the user interface and AI layer.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This ensures that financial calculations remain deterministic and testable.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Technology Stack
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Backend
 
-## Deploy on Vercel
+- Next.js server-side functionality
+- API routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Data
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- External exchange-rate APIs
+- Database — planned
+
+### AI
+
+- AI provider integration — planned
+
+### Deployment
+
+- Vercel
+- GitHub
+
+### Package Manager
+
+- pnpm
+
+---
+
+## Project Structure
+
+```text
+marginx/
+│
+├── app/                         # Next.js application
+│
+├── docs/                        # Project documentation
+│   ├── ARCHITECTURE.md
+│   ├── FINANCIAL-ENGINE.md
+│   ├── MARGINX_PROJECT_SPECIFICATION.md
+│   └── REQUIREMENTS.md
+│
+├── public/                      # Static assets
+│
+├── package.json
+├── pnpm-lock.yaml
+├── next.config.ts
+├── tsconfig.json
+└── README.md
+```
+
+The application structure will evolve as new features are implemented.
+
+---
+
+## Development
+
+### Requirements
+
+- Node.js
+- pnpm
+- Git
+
+### Install Dependencies
+
+```bash
+pnpm install
+```
+
+### Start Development Server
+
+```bash
+pnpm dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:3000
+```
+
+### Build for Production
+
+```bash
+pnpm build
+```
+
+### Start Production Server
+
+```bash
+pnpm start
+```
+
+---
+
+## Documentation
+
+Project documentation is available in the `docs/` directory.
+
+- [Project Specification](docs/MARGINX_PROJECT_SPECIFICATION.md)
+- [Requirements](docs/REQUIREMENTS.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Financial Engine](docs/FINANCIAL-ENGINE.md)
+
+---
+
+## Deployment
+
+MarginX is designed to be deployed on Vercel.
+
+The project is connected to GitHub and will use Git-based deployments.
+
+```text
+Local Development
+       │
+       ▼
+     Git
+       │
+       ▼
+    GitHub
+       │
+       ▼
+    Vercel
+       │
+       ▼
+  MarginX Web App
+```
+
+---
+
+## Project Status
+
+**Current Status:** Initial project setup
+
+The project documentation and initial Next.js application have been created.
+
+Development will proceed incrementally, beginning with the financial engine and core analysis functionality.
+
+---
+
+## Disclaimer
+
+MarginX is a software project intended for financial analysis and educational purposes.
+
+It does not:
+
+- Process real financial transactions
+- Hold user funds
+- Execute trades
+- Provide personalized financial advice
+- Provide professional tax or legal advice
+
+Results generated by MarginX are estimates based on the information and assumptions provided by the user.
