@@ -1,0 +1,25 @@
+{
+  "guards": {
+    "tests/calc/test_calc_guards.py": "c78ce4b613b9de5021a02657c30ef3cc6cc6d10569438911b1e972ea410435ce",
+    "tools/check_m1_guards.py": "030016daad338dbe7e1cbd6eb33503675fa49ecc1f916fe8b3df79c2ae03271f"
+  },
+  "history": [
+    {
+      "action": "migrate-legacy",
+      "reason": "M1-0 hardening: migrate verified flat legacy manifest to sealed v1 and add guard hashes",
+      "source_manifest": "R:/WORK/marginx/.quorx/trash/2026-11-22T12-39-55-542Z/backend/tools/protected_manifest.json",
+      "source_sha256": "61b124b3b83c1391a1d538146d85e6fa80c0af371775ee56591fd8f4f239939e",
+      "utc": "2026-11-22T13:44:02Z"
+    }
+  ],
+  "protected": {
+    "finance/__init__.py": "8e3ba1c901a7fcc85a27e623b99e2b645ef3aab43fb51dab2de3dcd25d5da338",
+    "finance/engine.py": "a9c77c591914cd3cf488a9faad5bc3a0d0c0a3062e032fa6ef47181211ebd353",
+    "finance/routes.py": "873b9b05a2c66791122e225823dbda79814da5ff752096c93aa5cccec186f74e",
+    "finance/schemas.py": "53e625285823906a280b345c2fea6010ca1ad9e22f7fb1e4b78f806b75f6794a",
+    "tests/test_api.py": "4603f625fcd1721789aa7649010c41d761a6bdd32180e08e31b89eb0b6b1b3bd",
+    "tests/test_engine.py": "66ffe8a4800ad07fd0bd8235c8eb7bd3bc9f05dc407cb0c2c4e068efda9bb2c5"
+  },
+  "seal": "7b913c95ae3b788e33b26773d4b8c6a499662b82afa5efa5c1d2b20933e36e4e",
+  "version": 1
+}
